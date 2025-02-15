@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage(srm checkout){
+        stage("srm checkout"){
             steps{withMaven(globalMavenSettingsConfig: '', jdk: '', maven: 'Maven', mavenSettingsConfig: '', traceability: true)}
             {
                 sh 'mvn compile'
