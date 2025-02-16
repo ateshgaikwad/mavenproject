@@ -6,20 +6,20 @@
 }
 
 body {
-    font-family: 'Georgia', serif;
-    background-color: #f4f1e8;
-    color: #4a4a4a;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e;
+    color: #ffffff;
     line-height: 1.6;
     padding: 20px;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #16213e;
     padding: 20px;
-    border: 1px solid #d4d4d4;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 header {
@@ -28,14 +28,15 @@ header {
 }
 
 header h1 {
-    font-size: 2.5em;
-    color: #6b4e3d;
+    font-size: 3em;
+    color: #e94560;
     margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 header p {
     font-size: 1.2em;
-    color: #7a7a7a;
+    color: #a8a8a8;
 }
 
 nav {
@@ -54,34 +55,66 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #6b4e3d;
+    color: #e94560;
     font-size: 1.1em;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
 
 main section {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 main section h2 {
-    font-size: 1.8em;
-    color: #6b4e3d;
-    margin-bottom: 10px;
+    font-size: 2em;
+    color: #e94560;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
 }
 
 main section p {
     font-size: 1.1em;
-    color: #4a4a4a;
+    color: #a8a8a8;
+}
+
+.crew-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.crew-member {
+    text-align: center;
+    margin: 10px;
+}
+
+.crew-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #e94560;
+    margin-bottom: 10px;
+}
+
+.crew-member h3 {
+    font-size: 1.3em;
+    color: #ffffff;
+}
+
+.crew-member p {
+    font-size: 1em;
+    color: #a8a8a8;
 }
 
 footer {
     text-align: center;
     margin-top: 20px;
     padding-top: 10px;
-    border-top: 1px solid #d4d4d4;
+    border-top: 1px solid #e94560;
     font-size: 0.9em;
-    color: #7a7a7a;
+    color: #a8a8a8;
 }
