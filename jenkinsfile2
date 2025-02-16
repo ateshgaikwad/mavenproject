@@ -12,6 +12,13 @@ pipeline{
             }
             }
         }
+        stage(test){
+            steps{withMaven(globalMavenSettingsConfig: '', jdk: 'JDK', maven: 'Maven', mavenSettingsConfig: '', traceability: true) 
+            {
+             sh 'mvn test'
+            }
+            }
+        }
         
 
     }
