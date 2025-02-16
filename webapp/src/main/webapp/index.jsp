@@ -1,65 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Piece Fan Site</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Piece Anime</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ff6600;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px;
+    }
+    nav button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    nav button:hover {
+      background-color: #cc5200;
+    }
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+    .content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header>
-            <h1>Welcome to the Grand Line!</h1>
-            <p>Explore the world of Monkey D. Luffy and his crew in their quest for the One Piece treasure.</p>
-        </header>
+  <header>
+    <h1>Welcome to the World of One Piece</h1>
+    <p>Explore the adventures of the Straw Hat Pirates!</p>
+  </header>
 
-        <!-- Navigation Menu -->
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Crew</a></li>
-                <li><a href="#">Adventures</a></li>
-                <li><a href="#">Devil Fruits</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+  <nav>
+    <button onclick="showHome()">Home</button>
+    <button onclick="showCharacters()">Characters</button>
+    <button onclick="showGallery()">Gallery</button>
+  </nav>
 
-        <!-- Main Content -->
-        <main>
-            <section class="intro">
-                <h2>About One Piece</h2>
-                <p><strong>One Piece</strong> is a Japanese manga series written and illustrated by Eiichiro Oda. It follows the adventures of Monkey D. Luffy, a young pirate whose body gained the properties of rubber after unintentionally eating a Devil Fruit. With his diverse crew of pirates, named the Straw Hat Pirates, Luffy explores the Grand Line in search of the world's ultimate treasure, the "One Piece," in order to become the next Pirate King.</p>
-            </section>
+  <div class="content" id="content">
+    <h2>Home</h2>
+    <p>One Piece is a Japanese anime series based on the manga by Eiichiro Oda. It follows the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, as they search for the legendary treasure known as the One Piece.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/One_Piece_Logo.png" alt="One Piece Logo">
+  </div>
 
-            <section class="crew">
-                <h2>Meet the Straw Hat Pirates</h2>
-                <div class="crew-members">
-                    <div class="crew-member">
-                        <img src="luffy.png" alt="Monkey D. Luffy">
-                        <h3>Monkey D. Luffy</h3>
-                        <p>Captain</p>
-                    </div>
-                    <div class="crew-member">
-                        <img src="zoro.png" alt="Roronoa Zoro">
-                        <h3>Roronoa Zoro</h3>
-                        <p>Swordsman</p>
-                    </div>
-                    <div class="crew-member">
-                        <img src="nami.png" alt="Nami">
-                        <h3>Nami</h3>
-                        <p>Navigator</p>
-                    </div>
-                    <!-- Add more crew members as needed -->
-                </div>
-            </section>
-        </main>
+  <footer>
+    <p>&copy; 2023 One Piece Fan Site</p>
+  </footer>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2023 One Piece Fan Site. All rights reserved. Made with ❤️ by a Nakama.</p>
-        </footer>
-    </div>
+  <script>
+    function showHome() {
+      document.getElementById("content").innerHTML = `
+        <h2>Home</h2>
+        <p>One Piece is a Japanese anime series based on the manga by Eiichiro Oda. It follows the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, as they search for the legendary treasure known as the One Piece.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/2c/One_Piece_Logo.png" alt="One Piece Logo">
+      `;
+    }
+
+    function showCharacters() {
+      document.getElementById("content").innerHTML = `
+        <h2>Main Characters</h2>
+        <p>Here are some of the main characters from One Piece:</p>
+        <img src="https://staticg.sportskeeda.com/editor/2022/09/7e7b6-16644509108993-1920.jpg" alt="Straw Hat Pirates" style="width: 80%;">
+        <ul>
+          <li>Monkey D. Luffy</li>
+          <li>Roronoa Zoro</li>
+          <li>Nami</li>
+          <li>Usopp</li>
+          <li>Sanji</li>
+          <li>Tony Tony Chopper</li>
+          <li>Nico Robin</li>
+          <li>Franky</li>
+          <li>Brook</li>
+          <li>Jimbei</li>
+        </ul>
+      `;
+    }
+
+    function showGallery() {
+      document.getElementById("content").innerHTML = `
+        <h2>Gallery</h2>
+        <p>Check out some amazing images from One Piece!</p>
+        <img src="https://wallpapercave.com/wp/wp4676582.jpg" alt="One Piece Wallpaper 1" style="width: 80%; margin-bottom: 20px;">
+        <img src="https://wallpapercave.com/wp/wp4676585.jpg" alt="One Piece Wallpaper 2" style="width: 80%;">
+      `;
+    }
+  </script>
 </body>
 </html>
