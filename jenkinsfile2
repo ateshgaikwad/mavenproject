@@ -2,7 +2,7 @@ pipeline{
     agent any
     stages{
         stage('scm checkout'){
-            steps{git branch: 'master', url: 'https://github.com/ateshgaikwad/Atesh_jenkins'}
+            steps{git branch: 'master', url: 'https://github.com/ateshgaikwad/mavenproject.git'}
         }
 
         stage(compile){
