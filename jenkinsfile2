@@ -1,6 +1,6 @@
 pipeline{
     stages{
-        stage(scm checkout){
+        stage('scm checkout'){
             steps{git branch: 'master', url: 'https://github.com/ateshgaikwad/Atesh_jenkins.git'}
         }
 
