@@ -5,26 +5,33 @@ pipeline{
             steps{git branch: 'master', url: 'https://github.com/ateshgaikwad/mavenproject.git'}
         }
 
-        stage(compile){
+        stage('compile'){
             steps{withMaven(globalMavenSettingsConfig: '', jdk: 'JDK', maven: 'Maven', mavenSettingsConfig: '', traceability: true) 
             {
              sh 'mvn compile'
             }
             }
         }
-        stage(test){
+        stage('test'){
             steps{withMaven(globalMavenSettingsConfig: '', jdk: 'JDK', maven: 'Maven', mavenSettingsConfig: '', traceability: true) 
             {
              sh 'mvn test'
             }
             }
         }
-        stage(package){
+        stage('package'){
             steps{withMaven(globalMavenSettingsConfig: '', jdk: 'JDK', maven: 'Maven', mavenSettingsConfig: '', traceability: true) 
             {
              sh 'mvn package'
             }
             }
+        }
+        stage('deploy'){
+            steps{
+                sshagent(['deploy_to_tomcat']) {
+                sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@65.2.82.57:/usr/share/tomcat/webapps'
+        }
+        }
         }
         
 
