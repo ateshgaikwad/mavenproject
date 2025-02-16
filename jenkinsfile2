@@ -2,13 +2,13 @@ pipeline{
     agent any
     stages{
         stage('scm checkout'){
-            steps{git branch: 'master', url: 'https://github.com/ateshgaikwad/Atesh_jenkins.git'}
+            steps{git branch: 'master', url: 'https://github.com/ateshgaikwad/Atesh_jenkins'}
         }
 
         stage(compile){
             steps{withMaven(globalMavenSettingsConfig: '', jdk: 'JDK', maven: 'Maven', mavenSettingsConfig: '', traceability: true) 
             {
-             sh "mvn compile"
+             sh 'mvn compile'
             }
             }
         }
