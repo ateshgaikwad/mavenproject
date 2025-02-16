@@ -19,6 +19,13 @@ pipeline{
             }
             }
         }
+        stage(package){
+            steps{withMaven(globalMavenSettingsConfig: '', jdk: 'JDK', maven: 'Maven', mavenSettingsConfig: '', traceability: true) 
+            {
+             sh 'mvn package'
+            }
+            }
+        }
         
 
     }
